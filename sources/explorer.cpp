@@ -51,7 +51,7 @@ int main(int argc, char const *argv[]) {
             cout << "REGEX OUTPUT" << endl;
 
             std::string regex_string = vm_console["regex"].as<std::string>(); //  "(f.*)+\\.dat" f.*.dat
-            std::vector<std::string> fileList{"f1.dat", "f2.dat", "f3.dat"};
+            std::vector<std::string> fileList{"f1.dat", "f2.dat", "f4.dat"};
             std::vector<std::string> fileMatch;
 
             //  boost::regex rgx(regex_string);
@@ -80,7 +80,7 @@ int main(int argc, char const *argv[]) {
                 for (int i = 0; i < fileMatch.size(); i++) {
                     std::cout << "Output " << fileMatch[i] << " in >> " << "log.txt" << '\n';
 
-                    std::string address = "./explorer/";
+                    std::string address = "explorer/";
 
                     const path p = address + fileMatch[i];
 
