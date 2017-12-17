@@ -80,7 +80,7 @@ int main(int argc, char const *argv[]) {
                 for (int i = 0; i < fileMatch.size(); i++) {
                     std::cout << "Output " << fileMatch[i] << " in >> " << "log.txt" << '\n';
 
-                    std::string address = "explorer/";
+                    std::string address = "./explorer/";
 
                     const path p = address + fileMatch[i];
 
