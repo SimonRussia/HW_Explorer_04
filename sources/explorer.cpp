@@ -54,8 +54,10 @@ int main(int argc, char const *argv[]) {
             std::vector<std::string> fileList{"f1.dat", "f2.dat", "f3.dat"};
             std::vector<std::string> fileMatch;
 
-            boost::regex rgx(regex_string);
-            boost::smatch matcher;
+            //  boost::regex rgx(regex_string);
+            //  boost::smatch matcher;
+            std::regex rgx(regex_string);
+            std::smatch matcher;
 
             scheduler_t scheduler;
             std::map<const path, std::future<bool> > results;
@@ -63,7 +65,8 @@ int main(int argc, char const *argv[]) {
             int counter_for_regex = 0;
 
             for (int i = 0; i < fileList.size(); i++) {
-                if(boost::regex_match(fileList[i], matcher, rgx)) {
+                //  if(boost::regex_match(fileList[i], matcher, rgx)) {
+                if(std::regex_match(fileList[i], matcher, rgx)) {
                     ++counter_for_regex;
                     fileMatch.push_back(matcher.str(0));
                 }
