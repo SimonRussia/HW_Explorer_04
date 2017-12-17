@@ -1,5 +1,6 @@
 #include <iostream>
 #include <future>
+#include <functional>
 #include <fstream>
 #include <map>
 #include <cstring>
