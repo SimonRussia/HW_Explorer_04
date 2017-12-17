@@ -4,7 +4,7 @@
 #include <fstream>
 #include <map>
 #include <cstring>
-#include <string>
+// #include <string>
 #include <thread>
 #include <boost/date_time/posix_time/posix_time.hpp>
 #include <boost/filesystem.hpp>
@@ -15,7 +15,7 @@
 using namespace boost::filesystem;
 using namespace boost::posix_time;
 using namespace boost::program_options;
-using namespace std;
+// using namespace std;
 
 class scheduler_t {
         std::vector<std::packaged_task<bool()> > v_task;
